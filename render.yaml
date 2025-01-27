@@ -1,0 +1,26 @@
+version: 1
+services:
+  - type: web
+    name: capstone-casting-agency
+    env: python
+    buildCommand: bash setup.sh 
+    startCommand: gunicorn flaskr:app 
+    envVars:
+      - key: FLASK_ENV
+        value: development
+      - key: AUTH0_DOMAIN
+        value: dev-8a6g43bbmkxc33g7.us.auth0.com
+      - key: AUTH0_API_AUDIENCE
+        value: CapstoneCastingAgencyAPI
+      - key: ALGORITHMS
+        value: RS256
+      - key: LOCAL_DATABASE_URL
+        value: $DATABASE_URI
+      - key: DATABASE_URL
+        value: $DATABASE_URL
+      - key: ASSISTANT_TOKEN
+        value: $ASSISTANT_TOKEN
+      - key: DIRECTOR_TOKEN
+        value: $DIRECTOR_TOKEN
+      - key: PRODUCER_TOKEN
+        value: $PRODUCER_TOKEN
