@@ -1,5 +1,9 @@
 # FSND Final Project
 
+This  is the final project of the Udacity Full Stack Developer Nano Degree Program that I am partaking as part of my job goals. The goal of this project is to deploy a Flask application hosted in Render Cloud/PostgreSQL and enable Role Based Authentication and roles-based access control (RBAC) with Auth0 (a third-party authentication system we covered in the course).
+
+I have implemented the Casting Agency model fora company called Capstone that assigns movies to actors. There are three roles within the company of Assistant, Director and Producer.
+
 ## Getting Started
 
 ### Installing Dependencies
@@ -11,6 +15,16 @@ Follow instructions to install the latest version of python for your platform in
 #### Virtual Enviornment
 
 We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+
+To do so, run the following commands
+
+```bash
+python3.9 -m venv venv
+```
+
+```bash
+source venv/bin/activate
+```
 
 #### PIP Dependencies
 
