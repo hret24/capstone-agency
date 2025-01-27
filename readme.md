@@ -235,3 +235,94 @@ Success Response:
    "success":True
 }
 ```
+
+### Examples running the endpoints
+
+If you're using a new terminal to test the endpoints, make sure you have executed the shell script.
+Alternatively, you can replace $DIRECTOR_TOKEN with the actual JWT.
+
+```bash
+curl -X GET http://127.0.0.1:5000/movies \
+  -H "Authorization: Bearer $DIRECTOR_TOKEN"
+```
+
+```
+{
+  "movies": [
+    {
+      "genre": "Comedy",
+      "id": 4,
+      "release_date": "2020-01-01",
+      "title": "Rush hour"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 5,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 6,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 7,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "Super Hero",
+      "id": 3,
+      "release_date": "2019-01-02",
+      "title": "Avengers 2"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 8,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 9,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 10,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 11,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    },
+    {
+      "genre": "SuperHero",
+      "id": 12,
+      "release_date": "2019-01-02",
+      "title": "Avengers"
+    }
+  ],
+  "success": true
+}
+```
+
+```bash
+curl -X DELETE http://127.0.0.1:5000/movies \
+  -H "Authorization: Bearer $ASSISTANT_TOKEN"
+```
+
+```
+{
+  "error": 405,
+  "message": "method not allowed",
+  "success": false
+}
+```
