@@ -26,15 +26,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.casting_assistant = ASSISTANT_TOKEN
         self.casting_director = DIRECTOR_TOKEN
         self.executive_producer = PRODUCER_TOKEN
-    
-    # @classmethod
-    # def setUpClass(cls):
-    #     """Set up the application context for the tests"""
-    #     cls.app = create_app()  
-    #     cls.app_context = cls.app.app_context()
-    #     cls.app_context.push()
-    #     pass
-    
+
     def tearDown(self):
         """Executed after reach test"""
         pass

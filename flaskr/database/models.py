@@ -21,14 +21,6 @@ def create_and_drop_all():
     db.create_all()
 
 
-# actor_movie_relationship_table = db.Table('movies_actiors_worked_in',
-#                                           db.Column('movie_id', db.Integer, db.ForeignKey(
-#                                               'movies.id'), primary_key=True),
-#                                           db.Column('actor_id', db.Integer, db.ForeignKey(
-#                                               'actors.id'), primary_key=True)
-#                                           )
-
-
 class Actor(db.Model):
     __tablename__ = 'actors'
     id = db.Column(db.Integer(), primary_key=True)
@@ -65,8 +57,6 @@ class Movie(db.Model):
     title = db.Column(db.String(), nullable=False)
     release_date = db.Column(db.Date(), nullable=False)
     genre = db.Column(db.String(), nullable=False, default='')
-    # actors = db.relationship('Actor', secondary=actor_movie_relationship_table,
-    #                          backref=db.backref('movie', lazy=True))
 
     def insert(self):
         db.session.add(self)
